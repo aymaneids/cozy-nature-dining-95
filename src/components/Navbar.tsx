@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu as MenuIcon, X } from "lucide-react";
 
 interface NavbarProps {
   transparent?: boolean;
@@ -36,6 +36,8 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
     { name: "Menu", href: "#menu" },
     { name: "About", href: "#about" },
     { name: "Gallery", href: "#gallery" },
+    { name: "Chefs", href: "#chefs" },
+    { name: "Events", href: "#events" },
     { name: "Reviews", href: "#testimonials" },
     { name: "Contact", href: "#contact" },
   ];
@@ -59,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -88,7 +90,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
             {isOpen ? (
               <X className="h-6 w-6" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <MenuIcon className="h-6 w-6" />
             )}
           </button>
         </div>
@@ -101,7 +103,7 @@ const Navbar: React.FC<NavbarProps> = ({ transparent = false }) => {
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <nav className="flex flex-col space-y-6 items-center">
+        <nav className="flex flex-col space-y-4 items-center">
           {navLinks.map((link) => (
             <a
               key={link.name}

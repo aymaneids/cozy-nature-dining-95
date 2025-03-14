@@ -37,6 +37,12 @@ const Hero: React.FC = () => {
               Make a Reservation
             </a>
           </div>
+          
+          {/* Hours badge */}
+          <div className="mt-8 inline-flex items-center bg-black/30 backdrop-blur-sm rounded-full px-4 py-2 border border-white/10">
+            <span className="text-white/80 mr-2">Open Today:</span>
+            <span className="text-white font-medium">8:00 AM - 9:00 PM</span>
+          </div>
         </div>
       </div>
       
@@ -50,6 +56,16 @@ const Hero: React.FC = () => {
       {/* Floating decorative elements */}
       <div className="absolute top-1/4 right-10 w-24 h-24 rounded-full bg-nature-500/10 backdrop-blur-md animate-spin-slow"></div>
       <div className="absolute bottom-1/3 left-10 w-16 h-16 rounded-full bg-warm-500/10 backdrop-blur-md animate-spin-slow" style={{ animationDelay: "2s" }}></div>
+      
+      {/* Featured badges */}
+      <div className="absolute bottom-20 right-10 hidden lg:flex flex-col space-y-4">
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10 flex items-center justify-center w-24 h-24">
+          <img src="https://img.icons8.com/ios-filled/100/FFFFFF/organic-food.png" alt="Organic" className="w-12 h-12 opacity-80" />
+        </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10 flex items-center justify-center w-24 h-24">
+          <img src="https://img.icons8.com/ios-filled/100/FFFFFF/medal.png" alt="Award winning" className="w-12 h-12 opacity-80" />
+        </div>
+      </div>
     </section>
   );
 };
